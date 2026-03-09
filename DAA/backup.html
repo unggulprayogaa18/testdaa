@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RevnAero - Home / DAA</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="marquee.css">
+    <link rel="stylesheet" href="crm.css">
+    <link rel="stylesheet" href="animation.css">
+    <link rel="stylesheet" href="splash.css">
+
+
+</head>
+
+<body>
+    <!-- <div class="splash-screen">
+    <div class="splash-telemetry">
+        <span>SYS.BOOT.SEQ_01</span>
+        <span>DAA_MODULE: ONLINE</span>
+        <span>CALIBRATING SENSORS...</span>
+    </div>
+
+    <div class="splash-center">
+        <div class="target-bracket top-left"></div>
+        <div class="target-bracket top-right"></div>
+        <div class="target-bracket bottom-left"></div>
+        <div class="target-bracket bottom-right"></div>
+
+        <div class="logo-wrapper">
+            <img src="/assets/foto/logo.png" alt="RevnAero Logo" class="splash-logo">
+            <div class="scan-laser"></div>
+        </div>
+    </div>
+
+    <div class="splash-loading">
+        <div class="loading-text">ESTABLISHING CONNECTION... <span class="loading-percentage">0%</span></div>
+        <div class="progress-bar-container">
+            <div class="progress-bar-fill"></div>
+        </div>
+    </div>
+</div> -->
+
+    <div class="hero-wrapper">
+        <div class="hero-card">
+            <video autoplay muted loop playsinline class="bg-video">
+                <source
+                    src="https://video.wixstatic.com/video/d7cbb1_4fef47b619da443f944a2ffa0f24da4c/1080p/mp4/file.mp4"
+                    type="video/mp4">
+            </video>
+            <div class="hero-overlay"></div>
+
+            <div class="notch">
+                <svg width="100%" height="100%" viewBox="0 0 550 80" preserveAspectRatio="none"
+                    style="position: absolute; top: 0; left: 0; z-index: -1;">
+                    <polygon points="0,0 550,0 490,80 60,80" fill="#09090b" />
+                    <polyline points="0,0 60,80 490,80 550,0" fill="none" stroke="rgba(255, 255, 255, 0.2)"
+                        stroke-width="1.5" />
+                </svg>
+            </div>
+
+            <nav>
+                <div class="logo">
+                    <img src="/assets/foto/logo.png" alt="RevnAero Logo">
+                </div>
+
+                <div class="nav-links">
+                    <a href="/DAA">Detect & Avoid</a>
+                    <a href="/cargo">Cargo Delivery</a>
+                    <a href="https://ag.revn.aero">Agriculture</a>
+                </div>
+
+                <button class="btn btn-primary">Contact Engineering</button>
+            </nav>
+
+            <div class="hero-content">
+                <div class="hero-pre-title">DETECT AND AVOID</div>
+                <h1>UNLOCKING ACCESS<br>TO <span>AIRSPACE</span></h1>
+                <p>Advanced Detect and Avoid (DAA) systems for autonomous drone safety. Certified reliability for Beyond
+                    Visual Line of Sight missions.</p>
+
+                <div class="hero-cta">
+                    <button class="btn btn-primary">Tech Spec Sheet</button>
+                    <button class="btn btn-outline">Watch Demo ⏵</button>
+                </div>
+            </div>
+
+            <div class="scroll-indicator">
+                <span>SCROLL</span>
+                <div class="scroll-line"></div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="stats-grid">
+        <div class="stat-box reveal">
+            <div class="stat-label">Detection Target
+                <span>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="var(--brand-orange)" style="width: 18px; height: 18px;">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M15.042 21.672L13.684 16.6m0 0l-2.51 2.225.569-9.47 5.227 7.917-3.286-.672zm-7.518-.267A8.25 8.25 0 1120.25 10.5M8.288 14.212A5.25 5.25 0 1117.25 10.5" />
+                    </svg>
+                </span>
+            </div>
+            <div class="stat-value" style="font-size: 1.5rem;">Cooperative &<br>Uncooperative</div>
+            <div class="stat-bar">
+                <div class="stat-bar-fill" style="width: 100%;"></div>
+            </div>
+        </div>
+        <div class="stat-box reveal delay-100">
+            <div class="stat-label">Processing
+                <span>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="var(--brand-orange)" style="width: 18px; height: 18px;">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" />
+                    </svg>
+                </span>
+            </div>
+            <div class="stat-value">Real-Time</div>
+            <div class="stat-bar">
+                <div class="stat-bar-fill" style="width: 95%;"></div>
+            </div>
+        </div>
+        <div class="stat-box reveal delay-200">
+            <div class="stat-label">Form Factor
+                <span>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="var(--brand-orange)" style="width: 18px; height: 18px;">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M12 3v17.25m0 0c-1.472 0-2.882.265-4.185.75M12 20.25c1.472 0 2.882.265 4.185.75M18.75 4.5v.75A2.25 2.25 0 0116.5 7.5h-9a2.25 2.25 0 01-2.25-2.25V4.5" />
+                    </svg>
+                </span>
+            </div>
+            <div class="stat-value" style="font-size: 1.6rem; padding-top: 10px;">Lightweight &<br>Compact</div>
+        </div>
+        <div class="stat-box reveal delay-300">
+            <div class="stat-label">Field of Regard
+                <span>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="var(--brand-orange)" style="width: 18px; height: 18px;">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" />
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                    </svg>
+                </span>
+            </div>
+            <div class="stat-value">270°</div>
+        </div>
+    </div>
+
+
+
+  <section class="daa-superiority"
+        style="max-width: 1200px; margin: 0 auto; padding: 4rem 5%; position: relative; z-index: 2;">
+
+        <div class="section-header reveal" style="text-align: left; margin-bottom: 3rem;">
+            <h2 style="font-size: 2.5rem; margin-bottom: 1rem;">Operational Superiority</h2>
+            <p style="color: var(--text-muted); max-width: 600px; font-size: 1.1rem;">
+                Our DAA system fuses optical cameras and ADS-B data to provide unmatched situational awareness for autonomous flight.
+            </p>
+        </div>
+
+        <div class="bento-grid">
+
+            <div class="bento-card glass-card card-wide " style="display: flex; flex-direction: column;">
+                <div class="card-icon" style="width: 36px; height: 36px;">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" style="width: 24px; height: 24px;">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M9.348 14.652a3.75 3.75 0 010-5.304m5.304 0a3.75 3.75 0 010 5.304m-7.425 2.121a6.75 6.75 0 010-9.546m9.546 0a6.75 6.75 0 010 9.546M12 10.5a1.5 1.5 0 100 3 1.5 1.5 0 000-3z" />
+                    </svg>
+                </div>
+                <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem;">Vision & ADS-B Fusion</h3>
+                <p style="color: var(--text-muted); margin-bottom: 1.5rem; max-width: 85%;">Incorporates three cameras providing a 270° field-of-regard, high precision inertial sensors, and ADS-B to effortlessly monitor nearby aircraft.</p>
+
+                <div
+                    style="margin-top: auto; height: 140px; background: #000; border-radius: 8px; border: 1px solid var(--border-color); position: relative; overflow: hidden; display: flex; align-items: flex-end; padding: 1rem;">
+                    <div
+                        style="position: absolute; right: 10%; bottom: -40%; width: 250px; height: 250px; background: repeating-radial-gradient(circle, transparent, transparent 20px, rgba(74, 222, 128, 0.1) 21px, rgba(74, 222, 128, 0.1) 22px); border-radius: 50%;">
+                    </div>
+                    <div
+                        style="position: absolute; right: 10%; bottom: -40%; width: 250px; height: 250px; background: conic-gradient(from 270deg, transparent, rgba(74, 222, 128, 0.3) 90deg, transparent 90deg); border-radius: 50%; animation: rotateRadar 4s linear infinite;">
+                    </div>
+
+                    <span
+                        style="position: relative; z-index: 2; font-size: 0.65rem; font-family: 'Space Grotesk'; color: #4ade80; border: 1px solid rgba(74, 222, 128, 0.4); padding: 4px 8px; border-radius: 4px; background: rgba(74, 222, 128, 0.1); letter-spacing: 1px;">CAMERA
+                        + ADS-B</span>
+                </div>
+            </div>
+
+            <div class="bento-card glass-card"
+                style="display: flex; flex-direction: column; position: relative; overflow: hidden;">
+                <div class="card-icon" style="width: 36px; height: 36px;">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" style="width: 24px; height: 24px;">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M8.25 3v1.5M4.5 8.25H3m18 0h-1.5M4.5 12H3m18 0h-1.5m-15 3.75H3m18 0h-1.5M8.25 19.5V21M12 3v1.5m0 15V21m3.75-18v1.5m0 15V21m-9-1.5h10.5a2.25 2.25 0 002.25-2.25V6.75a2.25 2.25 0 00-2.25-2.25H6.75A2.25 2.25 0 004.5 6.75v10.5a2.25 2.25 0 002.25 2.25zm.75-12h9v9h-9v-9z" />
+                    </svg>
+                </div>
+                <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem;">Neural Network Detection</h3>
+                <p style="color: var(--text-muted); margin-bottom: 2rem;">Trained in-house using millions of images to detect both cooperative and uncooperative targets, providing sufficient warning for avoidance maneuvers.</p>
+                <div style="margin-top: auto;">
+                    <a href="#"
+                        style="color: var(--brand-orange); font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; display: flex; align-items: center; gap: 5px;">Learn
+                        More <span>→</span></a>
+                </div>
+                <div
+                    style="position: absolute; right: -20px; top: 40px; width: 8rem; height: 8rem; color: var(--brand-orange); opacity: 0.05; transform: rotate(-15deg);">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1"
+                        stroke="currentColor" style="width: 100%; height: 100%;">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M10.343 3.94c.09-.542.56-.94 1.11-.94h1.093c.55 0 1.02.398 1.11.94l.149.894c.07.424.384.764.78.93.398.164.855.142 1.205-.108l.737-.527a1.125 1.125 0 011.45.12l.773.773a1.125 1.125 0 01.12 1.45l-.527.737c-.25.35-.272.806-.107 1.204.165.397.505.71.93.78l.893.15c.543.09.94.56.94 1.109v1.094c0 .55-.397 1.02-.94 1.11l-.894.149c-.424.07-.764.383-.929.78-.165.398-.143.854.107 1.204l.527.738c.32.447.269 1.06-.12 1.45l-.774.773a1.125 1.125 0 01-1.449.12l-.738-.527c-.35-.25-.806-.272-1.203-.107-.398.165-.71.505-.781.929l-.149.894c-.09.542-.56.94-1.11.94h-1.094c-.55 0-1.019-.398-1.11-.94l-.149-.894c-.07-.424-.383-.764-.78-.93-.398-.164-.854-.142-1.204.108l-.738.527c-.447.32-1.06.269-1.45-.12l-.773-.774a1.125 1.125 0 01-.12-1.45l.527-.737c.25-.35.272-.806.108-1.204-.165-.397-.506-.71-.93-.78l-.894-.15c-.542-.09-.94-.56-.94-1.109v-1.094c0-.55.398-1.02.94-1.11l.894-.149c.424-.07.765-.383.93-.78.165-.398.143-.854-.108-1.204l-.526-.738a1.125 1.125 0 01.12-1.45l.773-.773a1.125 1.125 0 011.45-.12l.737.527c.35.25.807.272 1.204.107.397-.165.71-.505.78-.929l.149-.894z" />
+                    </svg>
+                </div>
+            </div>
+
+            <div class="bento-card glass-card" style="display: flex; flex-direction: column;">
+                <div class="card-icon" style="width: 36px; height: 36px;">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" style="width: 24px; height: 24px;">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M15.59 14.37a6 6 0 01-5.84 7.38v-4.8m5.84-2.58a14.98 14.98 0 006.16-12.12A14.98 14.98 0 009.631 8.41m5.96 5.96a14.926 14.926 0 01-5.841 2.58m-.119-8.54a6 6 0 00-7.381 5.84h4.8m2.581-5.84a14.927 14.927 0 00-2.58 5.84m2.699 2.7c-.103.021-.207.041-.311.06a15.09 15.09 0 01-2.448-2.45A15.068 15.068 0 018.67 11.5M21 3l-1.8 1.8m-6 6l-1.8 1.8M3 21l1.8-1.8" />
+                    </svg>
+                </div>
+                <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem;">BVLOS Enabler</h3>
+                <p style="color: var(--text-muted);">Significantly reduces the mitigation burden of risk assessments, clearing the path for widespread Beyond Visual Line of Sight operations.</p>
+            </div>
+
+            <div class="bento-card glass-card card-wide"
+                style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 2rem;">
+                <div style="flex: 1; min-width: 250px;">
+                    <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem;">Optimized Edge Computing</h3>
+                    <p style="color: var(--text-muted); margin-bottom: 1.5rem;">Features real-time multi-camera detection. The vision pipeline handles camera motion compensation and optimizes performance against varied lighting, motion, and weather conditions.</p>
+                    <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                        <div
+                            style="border: 1px solid var(--border-color); padding: 0.5rem 1rem; border-radius: 8px; background: rgba(255,255,255,0.02);">
+                            <div
+                                style="font-family: 'Space Grotesk'; font-size: 1.25rem; font-weight: 700; color: #fff;">
+                                REAL-TIME</div>
+                            <div style="font-size: 0.6rem; color: var(--text-muted); letter-spacing: 1px;">PROCESSING</div>
+                        </div>
+                        <div
+                            style="border: 1px solid var(--border-color); padding: 0.5rem 1rem; border-radius: 8px; background: rgba(255,255,255,0.02);">
+                            <div
+                                style="font-family: 'Space Grotesk'; font-size: 1.25rem; font-weight: 700; color: #fff;">
+                                LOW</div>
+                            <div style="font-size: 0.6rem; color: var(--text-muted); letter-spacing: 1px;">POWER DRAW
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    style="width: 100px; height: 100px; border-radius: 50%; border: 2px dashed rgba(255,94,0,0.3); display: flex; align-items: center; justify-content: center; color: var(--brand-orange); flex-shrink: 0; background: rgba(255,94,0,0.05);">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" style="width: 48px; height: 48px;">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M8.25 3v1.5M4.5 8.25H3m18 0h-1.5M4.5 12H3m18 0h-1.5m-15 3.75H3m18 0h-1.5M8.25 19.5V21M12 3v1.5m0 15V21m3.75-18v1.5m0 15V21m-9-1.5h10.5a2.25 2.25 0 002.25-2.25V6.75a2.25 2.25 0 00-2.25-2.25H6.75A2.25 2.25 0 004.5 6.75v10.5a2.25 2.25 0 002.25 2.25zm.75-12h9v9h-9v-9z" />
+                    </svg>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="logo-marquee-section">
+        <div class="marquee-label">POWERING AUTONOMOUS FLIGHT FOR</div>
+        <div class="marquee-container">
+            <div class="marquee-track">
+
+                <div class="marquee-logo"><img src="/assets/foto/logo.png" alt="RevnAero"><span>AUSTRALIA</span></div>
+                <div class="marquee-logo"><img src="/assets/foto/logo.png" alt="RevnAero"><span>AUSTRALIA</span></div>
+                <div class="marquee-logo"><img src="/assets/foto/logo.png" alt="RevnAero"><span>AUSTRALIA</span></div>
+                <div class="marquee-logo"><img src="/assets/foto/logo.png" alt="RevnAero"><span>AUSTRALIA</span></div>
+                <div class="marquee-logo"><img src="/assets/foto/logo.png" alt="RevnAero"><span>AUSTRALIA</span></div>
+                <div class="marquee-logo"><img src="/assets/foto/logo.png" alt="RevnAero"><span>AUSTRALIA</span></div>
+                <div class="marquee-logo"><img src="/assets/foto/logo.png" alt="RevnAero"><span>AUSTRALIA</span></div>
+                <div class="marquee-logo"><img src="/assets/foto/logo.png" alt="RevnAero"><span>AUSTRALIA</span></div>
+
+                <div class="marquee-logo"><img src="/assets/foto/logo.png" alt="RevnAero"><span>AUSTRALIA</span></div>
+                <div class="marquee-logo"><img src="/assets/foto/logo.png" alt="RevnAero"><span>AUSTRALIA</span></div>
+                <div class="marquee-logo"><img src="/assets/foto/logo.png" alt="RevnAero"><span>AUSTRALIA</span></div>
+                <div class="marquee-logo"><img src="/assets/foto/logo.png" alt="RevnAero"><span>AUSTRALIA</span></div>
+                <div class="marquee-logo"><img src="/assets/foto/logo.png" alt="RevnAero"><span>AUSTRALIA</span></div>
+                <div class="marquee-logo"><img src="/assets/foto/logo.png" alt="RevnAero"><span>AUSTRALIA</span></div>
+                <div class="marquee-logo"><img src="/assets/foto/logo.png" alt="RevnAero"><span>AUSTRALIA</span></div>
+                <div class="marquee-logo"><img src="/assets/foto/logo.png" alt="RevnAero"><span>AUSTRALIA</span></div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="daa-architecture">
+        <div class="section-header" style="text-align: center; margin-bottom: 4rem;">
+            <div class="badge">System Architecture</div>
+            <h2 style="font-size: clamp(2rem, 5vw, 3.5rem);">The Intelligence Behind <span>Autonomy</span></h2>
+            <p style="margin: 1rem auto; max-width: 600px;">A real-time data processing architecture that fuses
+                sensory perception with artificial intelligence at the hardware level.</p>
+        </div>
+
+        <div class="bento-grid">
+            <div class="bento-card glass-card radar-scan">
+                <div class="tech-tag">Module 01: Perception</div>
+                <h3 style="margin-top: 1.5rem;">Vision & ADS-B Fusion</h3>
+                <p>Integrates three cameras (270° FOR), high-precision inertial sensors, and ADS-B for comprehensive airspace monitoring.</p>
+                <div class="card-visual corner-scope"
+                    style="margin-top: 2rem; height: 180px; background: url('https://ngcaerospace.com/wp-content/uploads/2022/01/detect-and-avoid.jpg') center/cover;">
+                    <div class="scan-line"></div>
+                </div>
+            </div>
+
+            <div class="bento-card glass-card"
+                style="display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; border: 1px solid rgba(255, 94, 0, 0.3);">
+                <div class="radar-circle-outer">
+                    <div class="radar-circle-inner">
+                        <span style="font-size: 1.8rem; font-weight: 800; color: var(--brand-orange);">EDGE</span>
+                    </div>
+                </div>
+                <h4 style="margin-top: 1.5rem; font-size: 1.2rem;">Compact Embedded Compute</h4>
+                <p>Powerful on-board processing handles camera motion compensation and environmental optimization in real-time.</p>
+                <div class="tech-tag"
+                    style="margin-top: 1rem; border-left: none; border-bottom: 2px solid var(--brand-orange);">
+                    Low Size, Weight & Power</div>
+            </div>
+
+            <div class="bento-card glass-card">
+                <div class="tech-tag">Module 02: Prediction</div>
+                <h3 style="margin-top: 1.5rem;">Neural Network Engine</h3>
+                <p>Trained in-house on millions of images to automatically detect, track, and predict trajectories for both cooperative and uncooperative aircraft.</p>
+                <div class="card-visual"
+                    style="margin-top: 2rem; background: #000; display: flex; align-items: center; justify-content: center;">
+                    <svg width="100" height="100" viewBox="0 0 100 100">
+                        <circle cx="50" cy="50" r="40" stroke="var(--brand-orange)" stroke-width="0.5" fill="none"
+                            opacity="0.3" />
+                        <path d="M10 50 L90 50 M50 10 L50 90" stroke="rgba(255,255,255,0.1)" />
+                        <circle cx="50" cy="50" r="2" fill="var(--brand-orange)" />
+                        <path d="M50 50 L75 30" stroke="var(--brand-orange)" stroke-width="2"
+                            marker-end="url(#arrow)" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="parallax-separator">
+        <div class="parallax-overlay"></div>
+        <div class="parallax-content">
+            <div class="badge">Next-Gen Autonomy</div>
+            <h2>Uncompromising Precision at Every Altitude</h2>
+            <p>Bridging the gap between complex military avionics and commercial scalability.</p>
+        </div>
+    </section>
+
+   <section class="split-section">
+        <div class="split-content">
+            <div class="badge">Tech Specs By Design</div>
+            <h2>Miniaturized for Maximum Impact</h2>
+            <p>We've engineered advanced computer vision into a low size, weight, and power form factor that fits on any commercial drone, without compromising on detection capability.</p>
+
+            <div class="feature-list">
+                <div class="list-item">
+                    <div class="list-number">1</div>
+                    <div class="list-text">
+                        <h4>Computer Vision AI</h4>
+                        <p>Neural networks trained on millions of images, constantly expanding through flight trials and automated data capture.</p>
+                    </div>
+                </div>
+                <div class="list-item">
+                    <div class="list-number">2</div>
+                    <div class="list-text">
+                        <h4>270° Field-of-Regard</h4>
+                        <p>Three integrated cameras combined with high-precision inertial sensors for comprehensive visual coverage.</p>
+                    </div>
+                </div>
+                <div class="list-item">
+                    <div class="list-number">3</div>
+                    <div class="list-text">
+                        <h4>UTM Synchronization</h4>
+                        <p>Predicted locations of detected aircraft are shared effortlessly with our UTM system, making every UAS part of the surveillance network.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="split-image-wrapper">
+            <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&q=80&w=800"
+                alt="Hardware Exploded View">
+        </div>
+    </section>
+    
+   <!-- <section class="software-integration" style="max-width: 1200px; margin: 0 auto; padding-top: 2rem;">
+        <div class="glass-card"
+            style="border-radius: 24px; overflow: hidden; display: grid; grid-template-columns: 1fr 1fr; gap: 0;">
+
+            <div style="padding: 4rem; display: flex; flex-direction: column; justify-content: center;">
+                <div class="badge">Developer Ecosystem</div>
+                <h2 style="font-size: 2.5rem; margin-bottom: 1.5rem;">UTM & ArduPilot <span>Integration</span></h2>
+                <p style="color: var(--text-muted); font-size: 1.1rem; margin-bottom: 2rem; line-height: 1.8;">
+                    Our DAA payload is designed to integrate seamlessly with the RevAero UTM system for centralized routing and constraint management. As an Official Partner, we also ensure deep compatibility with ArduPilot environments.
+                </p>
+
+                <ul style="list-style: none; display: flex; flex-direction: column; gap: 1rem;">
+                    <li style="display: flex; align-items: center; gap: 10px; color: #d4d4d8;">
+                        <span style="color: var(--brand-orange);">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                                stroke="currentColor" style="width: 16px; height: 16px;">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" />
+                            </svg>
+                        </span> RevAero UTM Interoperability
+                    </li>
+                    <li style="display: flex; align-items: center; gap: 10px; color: #d4d4d8;">
+                        <span style="color: var(--brand-orange);">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                                stroke="currentColor" style="width: 16px; height: 16px;">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" />
+                            </svg>
+                        </span> Official ArduPilot Partner Support
+                    </li>
+                    <li style="display: flex; align-items: center; gap: 10px; color: #d4d4d8;">
+                        <span style="color: var(--brand-orange);">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                                stroke="currentColor" style="width: 16px; height: 16px;">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" />
+                            </svg>
+                        </span> Effortless data sharing for network surveillance
+                    </li>
+                </ul>
+            </div>
+
+            <div
+                style="background: #000; padding: 2rem; border-left: 1px solid var(--border-color); position: relative;">
+                <div style="display: flex; gap: 8px; margin-bottom: 2rem;">
+                    <div style="width: 12px; height: 12px; border-radius: 50%; background: #ff5f56;"></div>
+                    <div style="width: 12px; height: 12px; border-radius: 50%; background: #ffbd2e;"></div>
+                    <div style="width: 12px; height: 12px; border-radius: 50%; background: #27c93f;"></div>
+                </div>
+
+                <pre
+                    style="font-family: 'Space Grotesk', monospace; font-size: 0.9rem; color: #a1a1aa; line-height: 1.7; overflow-x: auto;">
+<span style="color: #ff5e00;">import</span> { DAA, UTM } <span style="color: #ff5e00;">from</span> '@revaero/sdk';
+
+<span style="color: #6272a4;">// Initialize Payload & UTM Sync</span>
+<span style="color: #ff5e00;">const</span> visionEngine = <span style="color: #ff5e00;">new</span> DAA.System({
+  cameras: <span style="color: #bd93f9;">3</span>,
+  adsbEnabled: <span style="color: #ffbd2e;">true</span>
+});
+
+visionEngine.on(<span style="color: #f1fa8c;">'target_detected'</span>, (target) => {
+  <span style="color: #ff5e00;">if</span> (target.type === <span style="color: #f1fa8c;">'UNCOOPERATIVE'</span>) {
+    flightController.executeAvoidance();
+    
+    <span style="color: #6272a4;">// Share predicted location with UTM</span>
+    UTM.broadcastTelemetry(target.predictedVector);
+  }
+});
+
+visionEngine.start();
+<span style="color: #4ade80;">> SYS_STATUS: NEURAL_NET ARMED & UTM_SYNCED_</span>
+                </pre>
+            </div>
+        </div>
+    </section> -->
+
+    <section class="scrollytelling-section" id="scrolly-section">
+        <div class="sticky-container">
+            <div class="scrolly-glow"></div>
+
+            <div class="scroll-text-wrapper">
+                <h2 class="scroll-text text-1 active">
+                    <span class="highlight">Aviation</span> is evolving.
+                </h2>
+                <h2 class="scroll-text text-2">
+                    Missions are getting <span class="highlight">harder</span>.
+                </h2>
+                <h2 class="scroll-text text-3">
+                    You need <span class="highlight">eyes everywhere</span>.
+                </h2>
+            </div>
+
+            <div class="scrolly-progress">
+                <div class="scrolly-progress-bar"></div>
+            </div>
+        </div>
+    </section>
+   
+  <section class="mission-gallery-modern-full">
+    <div class="mission-grid-full">
+        <div class="mission-item-full main-feature">
+            <div class="mission-bg" style="background-image: url('/assets/foto/plane.jpg');"></div>
+            <div class="mission-overlay-full"></div>
+            <div class="mission-content-full">
+                <div class="badge">Validation</div>
+                <h3>Flight Trial<br>Proven</h3>
+                <p>Successfully trialed in numerous real-world encounters with both fixed-wing and rotary-wing intruder aircraft[cite: 527, 718].</p>
+                <div class="mission-line"></div>
+            </div>
+        </div>
+
+        <div class="mission-item-full secondary-feature">
+            <div class="mission-bg" style="background-image: url('https://images.unsplash.com/photo-1473968512647-3e447244af8f?auto=format&fit=crop&q=80&w=1200');"></div>
+            <div class="mission-overlay-full" style="background: linear-gradient(180deg, transparent 0%, rgba(255, 94, 0, 0.4) 100%);"></div>
+            <div class="mission-content-full">
+                <h3>Widespread<br>BVLOS</h3>
+                <p>Significantly reduces the mitigation burden of risk assessments for Beyond Visual Line of Sight operations[cite: 684, 689].</p>
+            </div>
+        </div>
+
+        <div class="mission-item-full tertiary-feature">
+            <div class="mission-content-full">
+                <div class="panel-icon-small">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                </div>
+                <h3>Networked<br>Surveillance</h3>
+                <p>Predicted locations are shared effortlessly with the RevAero UTM system[cite: 720, 753].</p>
+            </div>
+            <div class="mission-bg" style="background-image: url('/assets/foto/team2.jpg');"></div>
+            <div class="mission-overlay-full"></div>
+        </div>
+
+        <div class="mission-item-full fourth-feature">
+            <div class="mission-bg" style="background-image: url('https://images.unsplash.com/photo-1508614589041-895b88991e3e?auto=format&fit=crop&q=80&w=1200');"></div>
+            <div class="mission-overlay-full"></div>
+            <div class="mission-content-full">
+                <h3>Adaptive<br>Perception</h3>
+                <p>Optimized performance against varied lighting, motion, and visual clutter[cite: 725, 726].</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+ 
+
+    <div class="compliance">
+        <h3>Compliant with Global Aviation Standards</h3>
+        <div class="compliance-badges">
+            <div class="c-badge">✓ FAA PART 107</div>
+            <div class="c-badge">✓ EASA SORA</div>
+            <div class="c-badge">✓ ASTM F3411</div>
+            <div class="c-badge">✓ ISO 21384-3</div>
+        </div>
+    </div>
+
+    <section class="crm-lead-section"
+        style="max-width: 1200px; margin: 8rem auto 4rem; padding: 0 5%; position: relative; z-index: 2;">
+
+        <div class="ambient-glow"
+            style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 100%; height: 100%; background: radial-gradient(ellipse at center, rgba(255, 94, 0, 0.05) 0%, transparent 60%); z-index: -1; pointer-events: none;">
+        </div>
+
+        <div class="crm-seamless-grid">
+
+            <div class="crm-form-side">
+                <div class="badge"
+                    style="margin-bottom: 1.5rem; background: transparent; border-color: var(--brand-orange);">Lead
+                    Capture System</div>
+                <h2 style="font-size: clamp(2.5rem, 4vw, 3.5rem); margin-bottom: 1rem; line-height: 1.1;">Initialize
+                    <br><span style="color: var(--brand-orange);">Connection</span>
+                </h2>
+                <p style="color: var(--text-muted); font-size: 1.05rem; margin-bottom: 3rem; max-width: 450px;">
+                    Submit your mission parameters. Our internal CRM will route your enquiry directly to the engineering
+                    team for rapid deployment analysis.
+                </p>
+
+                <form class="seamless-form">
+                    <div class="form-row">
+                        <div class="input-line">
+                            <input type="text" id="op-name" required placeholder=" ">
+                            <label for="op-name">Operator Name</label>
+                            <div class="focus-line"></div>
+                        </div>
+                        <div class="input-line">
+                            <input type="text" id="org-name" required placeholder=" ">
+                            <label for="org-name">Organization</label>
+                            <div class="focus-line"></div>
+                        </div>
+                    </div>
+
+                    <div class="input-line">
+                        <input type="email" id="email-comm" required placeholder=" ">
+                        <label for="email-comm">Secure Email Comm</label>
+                        <div class="focus-line"></div>
+                    </div>
+
+                    <div class="input-line select-wrapper">
+                        <select id="mission-type" required>
+                            <option value="" disabled selected>Select Primary Mission Profile...</option>
+                            <option value="cargo">BVLOS Cargo Logistics</option>
+                            <option value="urban">Urban Air Mobility (UAM)</option>
+                            <option value="defense">Defense & Security</option>
+                            <option value="agriculture">Revolution Agriculture</option>
+                        </select>
+                        <div class="focus-line"></div>
+                    </div>
+
+                    <div class="input-line">
+                        <textarea id="mission-param" rows="1" required placeholder=" "></textarea>
+                        <label for="mission-param">Mission Parameters / Enquiry</label>
+                        <div class="focus-line"></div>
+                    </div>
+
+                    <button type="submit" class="hud-btn" style="margin-top: 3rem;">
+                        <span>TRANSMIT DATA</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
+                        </svg>
+                    </button>
+                </form>
+            </div>
+
+            <div class="crm-hud-side">
+                <div class="hud-frame">
+                    <div class="hud-header">
+                        <span class="hud-dot"></span>
+                        <span class="hud-title">SYSTEM_DIAGNOSTICS // CRM_NODE</span>
+                        <span class="hud-status">ONLINE</span>
+                    </div>
+
+                    <div class="hud-body">
+                        <div class="hud-data-row">
+                            <span class="data-label">ENQUIRY_ROUTING</span>
+                            <span class="data-value highlight-green">RESEND_API_ACTIVE</span>
+                        </div>
+                        <div class="hud-data-row">
+                            <span class="data-label">TRAFFIC_ANALYTICS</span>
+                            <span class="data-value highlight-green">CLARITY_SYNCED</span>
+                        </div>
+                        <div class="hud-data-row">
+                            <span class="data-label">LEAD_PROCESSING</span>
+                            <span class="data-value highlight-orange">AWAITING_INPUT</span>
+                        </div>
+
+                        <div class="hud-divider"></div>
+
+                        <div class="terminal-log">
+                            <p>> Establishing secure pipeline...</p>
+                            <p>> Encryption key verified.</p>
+                            <p>> Ready for data transmission<span class="blink">_</span></p>
+                        </div>
+                    </div>
+
+                    <div class="hud-corner top-right"></div>
+                    <div class="hud-corner bottom-left"></div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="partners-section">
+
+        <h3 class="partners-title">
+            Trusted by Industry Leaders
+        </h3>
+
+        <div class="partners-grid reveal">
+            <div class="partner-logo">
+                <img src="/assets/foto/1-removebg-preview.png" alt="Partner 1">
+            </div>
+            <div class="partner-logo">
+                <img src="/assets/foto/2-removebg-preview.png" alt="Partner 2">
+            </div>
+            <div class="partner-logo">
+                <img src="/assets/foto/3-removebg-preview.png" alt="Partner 3">
+            </div>
+            <div class="partner-logo">
+                <img src="/assets/foto/4-removebg-preview.png" alt="Partner 4">
+            </div>
+            <div class="partner-logo">
+                <img src="/assets/foto/5-removebg-preview.png" alt="Partner 5">
+            </div>
+        </div>
+
+    </section>
+
+    <section class="bottom-cta">
+        <h2>Ready to fly beyond limits?</h2>
+        <p>Integrate RevnAero DAA today and unlock the full potential of your autonomous fleet.</p>
+        <div class="hero-cta">
+            <button class="btn btn-primary">Get Started</button>
+            <button class="btn btn-outline">Contact Engineering</button>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <div class="logo">
+                    <img src="/assets/foto/logo.png" alt="RevnAero Logo">
+                </div>
+                <p>Pioneering the future of autonomous flight safely with next-gen avionics.</p>
+            </div>
+
+            <div class="footer-col">
+                <h4>Product</h4>
+                <ul>
+                    <li><a href="#">Detect & Avoid</a></li>
+                    <li><a href="#">Cargo Systems</a></li>
+                    <li><a href="#">Software SDK</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Press</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Stay Updated</h4>
+                <p style="color: var(--text-muted); font-size: 0.85rem; margin-bottom: 0.5rem;">Join our newsletter
+                    for the latest tech updates.</p>
+                <div class="subscribe-form">
+                    <input type="email" placeholder="Enter your email">
+                    <button>→</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div>© 2026 RevnAero Inc. All rights reserved.</div>
+            <div class="footer-bottom-links">
+                <a href="#" style="color: inherit; text-decoration: none;">Privacy Policy</a>
+                <a href="#" style="color: inherit; text-decoration: none;">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>

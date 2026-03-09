@@ -1,0 +1,167 @@
+/* ================= NEW AVIONIC SPLASH SCREEN STYLES ================= */
+.splash-screen {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    font-family: 'Space Grotesk', monospace;
+    transition: opacity 0.6s cubic-bezier(0.85, 0, 0.15, 1), visibility 0.6s;
+    
+    /* --- BACKGROUND GAMBAR DENGAN OVERLAY GELAP --- */
+    background-image: 
+        linear-gradient(rgba(9, 9, 11, 0.85), rgba(9, 9, 11, 0.9)), /* Overlay gelap (var--bg-dark) */
+        url('https://images.unsplash.com/photo-1473968512647-3e447244af8f?auto=format&fit=crop&q=80&w=1920'); /* Gambar Background */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.splash-screen.hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: scale(1.05); /* Sedikit membesar saat menghilang agar dramatis */
+}
+
+/* --- Telemetry Text --- */
+.splash-telemetry {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    color: var(--text-muted);
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    opacity: 0;
+    animation: fadeInText 0.5s ease-out forwards;
+}
+
+.splash-telemetry span:nth-child(2) { animation-delay: 0.4s; opacity: 0; animation: fadeInText 0.5s ease-out 0.4s forwards; }
+.splash-telemetry span:nth-child(3) { animation-delay: 0.8s; opacity: 0; animation: fadeInText 0.5s ease-out 0.8s forwards; color: var(--brand-orange); }
+
+/* --- Target Lock Area --- */
+.splash-center {
+    position: relative;
+    width: 350px;
+    height: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Brackets Bidikan */
+.target-bracket {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border-color: var(--brand-orange);
+    border-style: solid;
+    opacity: 0;
+    animation: lockOn 1s cubic-bezier(0.16, 1, 0.3, 1) 0.5s forwards;
+}
+
+.top-left { top: -20px; left: -20px; border-width: 3px 0 0 3px; }
+.top-right { top: -20px; right: -20px; border-width: 3px 3px 0 0; }
+.bottom-left { bottom: -20px; left: -20px; border-width: 0 0 3px 3px; }
+.bottom-right { bottom: -20px; right: -20px; border-width: 0 3px 3px 0; }
+
+/* --- Logo & Laser Scan --- */
+.logo-wrapper {
+    position: relative;
+    overflow: hidden; /* Penting agar laser tidak keluar batas */
+    padding: 10px;
+}
+
+.splash-logo {
+    width: 280px;
+    height: auto;
+    opacity: 0;
+    filter: drop-shadow(0 0 10px rgba(255, 94, 0, 0.3));
+    animation: revealLogo 0.1s forwards 1.2s; /* Muncul tiba-tiba saat disapu laser */
+}
+
+.scan-laser {
+    position: absolute;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: var(--brand-orange);
+    box-shadow: 0 0 15px 5px rgba(255, 94, 0, 0.5);
+    opacity: 0;
+    animation: laserSweep 1.5s cubic-bezier(0.4, 0, 0.2, 1) 1s forwards;
+}
+
+/* --- Loading Bar --- */
+.splash-loading {
+    position: absolute;
+    bottom: 50px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    opacity: 0;
+    animation: fadeInText 0.5s ease-out 0.8s forwards;
+}
+
+.loading-text {
+    color: var(--text-muted);
+    font-size: 0.7rem;
+    letter-spacing: 0.15em;
+    display: flex;
+    justify-content: space-between;
+}
+
+.progress-bar-container {
+    width: 100%;
+    height: 2px;
+    background-color: var(--border-color);
+    position: relative;
+    overflow: hidden;
+}
+
+.progress-bar-fill {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: var(--brand-orange);
+    width: 0%;
+    animation: loadProgress 2s ease-out 1s forwards;
+}
+
+/* --- ANIMATIONS --- */
+@keyframes fadeInText { to { opacity: 1; } }
+
+@keyframes lockOn {
+    0% { opacity: 0; transform: scale(1.5); }
+    100% { opacity: 1; transform: scale(1); }
+}
+
+@keyframes laserSweep {
+    0% { top: -20%; opacity: 0; }
+    10% { opacity: 1; }
+    90% { opacity: 1; }
+    100% { top: 120%; opacity: 0; }
+}
+
+@keyframes revealLogo { to { opacity: 1; } }
+
+@keyframes loadProgress {
+    0% { width: 0%; }
+    40% { width: 60%; }
+    70% { width: 85%; }
+    100% { width: 100%; }
+}
+
+@media (max-width: 768px) {
+    .splash-logo { width: 220px; }
+    .splash-center { width: 260px; height: 140px; }
+    .splash-telemetry { top: 20px; left: 20px; font-size: 0.6rem; }
+    .splash-loading { width: 250px; bottom: 30px; }
+}

@@ -1,0 +1,106 @@
+/* --- LOGO MARQUEE SECTION --- */
+.logo-marquee-section {
+  padding: 4rem 0;
+  background: var(--bg-dark);
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+  margin-top: 4rem; /* Jarak dari section atasnya */
+}
+
+.marquee-label {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  color: var(--text-muted);
+  margin-bottom: 2.5rem;
+  text-transform: uppercase;
+}
+
+.marquee-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+}
+
+/* Efek gradasi pudar di pinggir kiri & kanan (Vignette) */
+.marquee-container::before,
+.marquee-container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 15vw; /* Lebar area pudar */
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.marquee-container::before {
+  left: 0;
+  background: linear-gradient(to right, var(--bg-dark) 0%, transparent 100%);
+}
+
+.marquee-container::after {
+  right: 0;
+  background: linear-gradient(to left, var(--bg-dark) 0%, transparent 100%);
+}
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  /* Tambahkan durasi kalau dirasa terlalu cepat, misalnya jadi 30s */
+  animation: scrollMarquee 25s linear infinite;
+}
+
+/* Berhenti bergerak kalau kursor diarahkan ke logo */
+.marquee-track:hover {
+  animation-play-state: paused;
+}
+
+.marquee-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 0 4rem; /* Jarak antar logo saya lebarkan sedikit biar elegan */
+  opacity: 0.4;
+  filter: grayscale(100%);
+  transition: all 0.4s ease;
+  cursor: default;
+  flex-shrink: 0; /* INI WAJIB: Mencegah logo mengecil (tergencet) di layar */
+}
+
+.marquee-logo:hover {
+  opacity: 1; /* Terang saat di-hover */
+  filter: grayscale(0%); /* Kembali berwarna */
+}
+
+.marquee-logo img {
+  height: 28px; /* Sesuaikan ukuran logomu di sini */
+  width: auto;
+  object-fit: contain;
+}
+
+.marquee-logo span {
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: #fff;
+  letter-spacing: 0.05em;
+}
+
+/* Keyframes untuk bikin dia gerak ke kiri */
+@keyframes scrollMarquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    /* Menggeser persis 50% dari total panjang track (karena elemen kita duplikat 2x) */
+    transform: translateX(-50%);
+  }
+}

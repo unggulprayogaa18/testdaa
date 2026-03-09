@@ -1,0 +1,209 @@
+/* --- SEAMLESS CRM HUD STYLE --- */
+.crm-seamless-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6rem;
+  align-items: center;
+}
+
+/* Minimalist Form */
+.seamless-form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.input-line {
+  position: relative;
+  width: 100%;
+}
+
+/* Hilangkan box, sisa garis bawah saja */
+.input-line input,
+.input-line select,
+.input-line textarea {
+  width: 100%;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 0.5rem 0;
+  color: #fff;
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+/* Animasi Label Mengambang (Floating Label) */
+.input-line label {
+  position: absolute;
+  top: 0.5rem;
+  left: 0;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  transition: all 0.3s ease;
+  pointer-events: none;
+}
+
+/* Saat input diisi atau difokuskan, label naik ke atas */
+.input-line input:focus ~ label,
+.input-line input:not(:placeholder-shown) ~ label,
+.input-line textarea:focus ~ label,
+.input-line textarea:not(:placeholder-shown) ~ label {
+  top: -1rem;
+  font-size: 0.65rem;
+  color: var(--brand-orange);
+}
+
+/* Garis aksen oranye yang melebar saat fokus */
+.focus-line {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background: var(--brand-orange);
+  transition: width 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.input-line input:focus ~ .focus-line,
+.input-line select:focus ~ .focus-line,
+.input-line textarea:focus ~ .focus-line {
+  width: 100%;
+}
+
+.input-line select {
+  color: var(--text-muted);
+  cursor: pointer;
+  appearance: none;
+  border-radius: 0;
+}
+
+/* HUD Button */
+.hud-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 15px;
+  background: transparent;
+  border: none;
+  color: var(--brand-orange);
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  font-size: 1.1rem;
+  letter-spacing: 0.1em;
+  cursor: pointer;
+  padding: 0;
+  width: fit-content;
+  transition: all 0.3s ease;
+}
+
+.hud-btn svg {
+  width: 24px;
+  height: 24px;
+  transition: transform 0.3s ease;
+}
+
+.hud-btn:hover {
+  color: #fff;
+}
+
+.hud-btn:hover svg {
+  transform: translateX(8px);
+}
+
+/* --- HUD TERMINAL (Tanpa Card Solid) --- */
+.hud-frame {
+  position: relative;
+  padding: 3rem;
+  border-left: 1px solid rgba(255, 94, 0, 0.3);
+  background: linear-gradient(90deg, rgba(255, 94, 0, 0.03) 0%, transparent 100%);
+}
+
+.hud-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: 'Space Grotesk', monospace;
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  margin-bottom: 3rem;
+  color: var(--text-muted);
+}
+
+.hud-dot {
+  width: 8px;
+  height: 8px;
+  background: var(--brand-orange);
+  border-radius: 50%;
+  box-shadow: 0 0 10px var(--brand-orange);
+  animation: blink 2s infinite;
+}
+
+.hud-status {
+  margin-left: auto;
+  color: #4ade80;
+}
+
+.hud-data-row {
+  display: flex;
+  justify-content: space-between;
+  font-family: 'Space Grotesk', monospace;
+  font-size: 0.85rem;
+  margin-bottom: 1.5rem;
+  letter-spacing: 0.05em;
+}
+
+.data-label { color: var(--text-muted); }
+.highlight-green { color: #4ade80; }
+.highlight-orange { color: var(--brand-orange); }
+
+.hud-divider {
+  height: 1px;
+  width: 100%;
+  background: repeating-linear-gradient(90deg, var(--border-color), var(--border-color) 4px, transparent 4px, transparent 8px);
+  margin: 2rem 0;
+}
+
+.hud-corner {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-color: var(--brand-orange);
+  border-style: solid;
+  opacity: 0.5;
+}
+
+.hud-corner.top-right {
+  top: 0;
+  right: 0;
+  border-width: 2px 2px 0 0;
+}
+
+.hud-corner.bottom-left {
+  bottom: 0;
+  left: 0;
+  border-width: 0 0 2px 2px;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .crm-seamless-grid {
+    grid-template-columns: 1fr;
+    gap: 4rem;
+  }
+  .hud-frame {
+    border-left: none;
+    border-top: 1px solid rgba(255, 94, 0, 0.3);
+    background: linear-gradient(180deg, rgba(255, 94, 0, 0.03) 0%, transparent 100%);
+    padding: 3rem 0;
+  }
+}
