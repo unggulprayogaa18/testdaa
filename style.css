@@ -2364,16 +2364,17 @@ footer {
   .ed-visual::before, .ed-visual::after {
     display: none; /* Sembunyikan aksen siku di HP agar tidak sempit */
   }
-}/* ==========================================
+}
+/* ==========================================
    TECH OUTLINE MARQUEE SEPARATOR
    ========================================== */
 .tech-marquee-separator {
-  background-color: transparent;
+  background-color: var(--bg-dark); /* Background diubah jadi hitam pekat */
   padding: 4rem 0;
   overflow: hidden;
   position: relative;
-  border-top: 1px solid rgba(255, 255, 255, 0.03);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+  /* border-top: 1px solid rgba(255, 255, 255, 0.03);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.03); */
 }
 
 .tech-marquee-track {
@@ -2387,7 +2388,7 @@ footer {
   display: flex;
   align-items: center;
   gap: 3rem;
-  padding-right: 3rem; /* Wajib sama dengan gap agar loop sempurna */
+  padding-right: 3rem;
   animation: scrollTechText 35s linear infinite;
   white-space: nowrap;
   min-width: max-content;
@@ -2403,8 +2404,8 @@ footer {
   font-size: clamp(3rem, 5vw, 4.5rem);
   font-weight: 800;
   text-transform: uppercase;
-  color: transparent;
-  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.15); /* Teks bolong (outline) */
+  color: #ffffff; /* Teks diubah jadi putih solid */
+  -webkit-text-stroke: 0; /* Outline bolong dihilangkan */
   letter-spacing: 0.02em;
   transition: all 0.4s ease;
   cursor: default;
@@ -2413,7 +2414,7 @@ footer {
 /* Efek menyala oranye saat teks dilewati kursor */
 .tech-marquee-content span:hover {
   color: var(--brand-orange);
-  -webkit-text-stroke: 1px var(--brand-orange);
+  -webkit-text-stroke: 0; /* Pastikan outline tetap hilang saat hover */
   text-shadow: 0 0 30px rgba(255, 94, 0, 0.4);
 }
 
@@ -2431,6 +2432,6 @@ footer {
 
 @media (max-width: 768px) {
   .tech-marquee-separator { padding: 2rem 0; }
-  .tech-marquee-content span { -webkit-text-stroke: 1px rgba(255, 255, 255, 0.25); }
+  .tech-marquee-content span { -webkit-text-stroke: 0; } /* Hapus stroke juga di mode HP */
   .tech-marquee-content svg { width: 30px; height: 30px; }
 }
