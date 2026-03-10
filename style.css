@@ -2043,3 +2043,394 @@ footer {
   color: var(--brand-orange);
   font-weight: 700; /* Membuat teks sedikit lebih tebal agar menonjol */
 }
+
+
+/* ==========================================
+   OPERATIONAL SUPERIORITY (MODERN ASYMMETRIC)
+   ========================================== */
+.sup-grid {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr; /* Kolom kiri lebih lebar */
+  gap: 1.5rem;
+}
+
+.sup-right-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Card Styling mirip gambar (Dark & Minimalist) */
+.sup-card {
+  background: #0d0d0f; /* Hitam pekat elegan */
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 20px;
+  padding: 2.5rem;
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  display: flex;
+  flex-direction: column;
+}
+
+.sup-card:hover {
+  border-color: rgba(255, 94, 0, 0.3);
+  background: #121214;
+  transform: translateY(-4px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Box Ikon Oranye Kecil */
+.sup-icon {
+  width: 44px;
+  height: 44px;
+  background: rgba(255, 94, 0, 0.08);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--brand-orange);
+  margin-bottom: 1.5rem;
+}
+
+.sup-icon svg {
+  width: 22px;
+  height: 22px;
+}
+
+.sup-card h3 {
+  font-size: 1.4rem;
+  color: #ffffff;
+  margin-bottom: 0.8rem;
+  letter-spacing: -0.01em;
+}
+
+.sup-card p {
+  color: #a1a1aa;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+
+/* Watermark Shield di Kartu Kanan Atas */
+.sup-card-relative {
+  position: relative;
+  overflow: hidden;
+}
+
+.sup-watermark {
+  position: absolute;
+  right: -20px;
+  top: 50%;
+  transform: translateY(-50%) rotate(-10deg);
+  width: 160px;
+  height: 160px;
+  color: var(--brand-orange);
+  opacity: 0.04; /* Sangat transparan */
+  pointer-events: none;
+}
+
+.sup-watermark svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* VISUAL RADAR HIJAU (Sesuai Gambar) */
+.sup-radar-box {
+  margin-top: auto; /* Mendorong box ke bawah */
+  padding-top: 2rem;
+  height: 180px;
+  background: #050505;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  padding: 1.5rem;
+}
+
+/* Lingkaran Garis Radar */
+.radar-circle {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%) translateX(50%);
+  border: 1px solid rgba(74, 222, 128, 0.15);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.rc-1 { width: 100px; height: 100px; }
+.rc-2 { width: 220px; height: 220px; }
+.rc-3 { width: 340px; height: 340px; }
+
+/* Sorotan Cahaya Radar (Berputar) */
+.radar-cone {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 400px;
+  height: 400px;
+  background: conic-gradient(from 180deg at 100% 50%, rgba(74, 222, 128, 0.25) 0deg, transparent 70deg);
+  border-radius: 50%;
+  pointer-events: none;
+  animation: radarSweep 4s linear infinite;
+  transform-origin: right center;
+}
+
+/* Lencana Teks Hijau */
+.radar-badge {
+  position: relative;
+  z-index: 2;
+  font-size: 0.65rem;
+  font-family: 'Space Grotesk', sans-serif;
+  color: #4ade80;
+  border: 1px solid rgba(74, 222, 128, 0.4);
+  padding: 6px 12px;
+  border-radius: 6px;
+  background: rgba(74, 222, 128, 0.1);
+  letter-spacing: 1px;
+  font-weight: 700;
+}
+
+@keyframes radarSweep {
+  0% { transform: translateY(-50%) rotate(-45deg); }
+  100% { transform: translateY(-50%) rotate(315deg); }
+}
+
+/* Responsif HP */
+@media (max-width: 992px) {
+  .sup-grid {
+    grid-template-columns: 1fr;
+  }
+} 
+
+/* ==========================================
+   BORDERLESS EDITORIAL SHOWCASE (NON-CARD)
+   ========================================== */
+.editorial-showcase {
+  padding: 8rem 5%;
+  position: relative;
+  background: transparent; /* Menyatu langsung dengan background halaman */
+  border-top: 1px solid rgba(255, 255, 255, 0.03); /* Pemisah super halus */
+}
+
+.editorial-grid {
+  max-width: 1250px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.1fr 1fr; /* Teks sedikit lebih lebar ruangannya */
+  gap: 6rem;
+  align-items: center;
+}
+
+/* --- AREA TEKS --- */
+.ed-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.ed-badge {
+  font-family: 'Space Grotesk', sans-serif;
+  color: var(--brand-orange);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 2rem;
+}
+
+.ed-badge svg {
+  width: 20px;
+  height: 20px;
+}
+
+.ed-badge::after {
+  content: "";
+  height: 1px;
+  width: 40px;
+  background: var(--brand-orange);
+  opacity: 0.4;
+}
+
+.ed-title {
+  font-size: clamp(2.2rem, 3.5vw, 3.2rem);
+  line-height: 1.1;
+  color: var(--text-main);
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.02em;
+}
+
+.ed-desc {
+  font-size: clamp(1.1rem, 2vw, 1.35rem);
+  color: #d4d4d8;
+  line-height: 1.6;
+  margin-bottom: 3rem;
+  font-weight: 400;
+}
+
+/* Grid Info/Fitur Bawah (Minimalist Data Readout style) */
+.ed-features-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  padding-top: 2.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.ed-feat-item h4 {
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  color: #fcfcfc;
+  margin-bottom: 0.6rem;
+  font-weight: 600;
+}
+
+.ed-feat-item p {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+/* --- AREA GAMBAR (VISUAL) --- */
+.ed-visual {
+  position: relative;
+}
+
+/* Aksen siku ala kamera HUD/Aerospace di pojok gambar */
+.ed-visual::before {
+  content: "";
+  position: absolute;
+  top: -20px; left: -20px;
+  width: 80px; height: 80px;
+  border-top: 2px solid var(--brand-orange);
+  border-left: 2px solid var(--brand-orange);
+  opacity: 0.4;
+  z-index: 0;
+  transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.ed-visual::after {
+  content: "";
+  position: absolute;
+  bottom: -20px; right: -20px;
+  width: 80px; height: 80px;
+  border-bottom: 2px solid var(--brand-orange);
+  border-right: 2px solid var(--brand-orange);
+  opacity: 0.4;
+  z-index: 0;
+  transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.ed-visual:hover::before { top: -25px; left: -25px; opacity: 1; }
+.ed-visual:hover::after { bottom: -25px; right: -25px; opacity: 1; }
+
+.ed-visual img {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: auto;
+  border-radius: 4px; /* Sudut tajam/sedikit bulat ala hardware tech */
+  box-shadow: 0 40px 80px rgba(0, 0, 0, 0.8);
+  /* filter: grayscale(10%); */ /* Opsional jika ingin gambar sedikit membaur */
+}
+
+/* Teks Caption di bawah gambar */
+.ed-caption {
+  position: relative;
+  z-index: 1;
+  margin-top: 1.5rem;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  font-style: italic;
+  line-height: 1.5;
+  padding-left: 1rem;
+  border-left: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Responsif HP */
+@media (max-width: 992px) {
+  .editorial-grid {
+    grid-template-columns: 1fr;
+    gap: 4rem;
+  }
+  .ed-features-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  .ed-visual::before, .ed-visual::after {
+    display: none; /* Sembunyikan aksen siku di HP agar tidak sempit */
+  }
+}/* ==========================================
+   TECH OUTLINE MARQUEE SEPARATOR
+   ========================================== */
+.tech-marquee-separator {
+  background-color: transparent;
+  padding: 4rem 0;
+  overflow: hidden;
+  position: relative;
+  border-top: 1px solid rgba(255, 255, 255, 0.03);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.tech-marquee-track {
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+  user-select: none;
+}
+
+.tech-marquee-content {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  padding-right: 3rem; /* Wajib sama dengan gap agar loop sempurna */
+  animation: scrollTechText 35s linear infinite;
+  white-space: nowrap;
+  min-width: max-content;
+}
+
+/* Menghentikan animasi saat di-hover */
+.tech-marquee-separator:hover .tech-marquee-content {
+  animation-play-state: paused;
+}
+
+.tech-marquee-content span {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: clamp(3rem, 5vw, 4.5rem);
+  font-weight: 800;
+  text-transform: uppercase;
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.15); /* Teks bolong (outline) */
+  letter-spacing: 0.02em;
+  transition: all 0.4s ease;
+  cursor: default;
+}
+
+/* Efek menyala oranye saat teks dilewati kursor */
+.tech-marquee-content span:hover {
+  color: var(--brand-orange);
+  -webkit-text-stroke: 1px var(--brand-orange);
+  text-shadow: 0 0 30px rgba(255, 94, 0, 0.4);
+}
+
+.tech-marquee-content svg {
+  width: 40px;
+  height: 40px;
+  color: var(--brand-orange);
+  opacity: 0.8;
+}
+
+@keyframes scrollTechText {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@media (max-width: 768px) {
+  .tech-marquee-separator { padding: 2rem 0; }
+  .tech-marquee-content span { -webkit-text-stroke: 1px rgba(255, 255, 255, 0.25); }
+  .tech-marquee-content svg { width: 30px; height: 30px; }
+}
