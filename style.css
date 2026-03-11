@@ -1275,40 +1275,40 @@ footer {
 /* --- SCROLLYTELLING SECTION (MODERN) --- */
 /* --- SCROLLYTELLING SECTION (MODERN PARALLAX) --- */
 .scrollytelling-section {
-    height: 300vh;
-    position: relative;
-    
-    /* GANTI BACKGROUND JADI PARALLAX IMAGE */
-    background: url('/assets/foto/team3.png') center/cover no-repeat fixed; 
-    
-    z-index: 2;
-    /* border-top: 1px solid var(--border-color); */
+  height: 300vh;
+  position: relative;
+
+  /* GANTI BACKGROUND JADI PARALLAX IMAGE */
+  background: url("/assets/foto/team3.png") center/cover no-repeat fixed;
+
+  z-index: 2;
+  /* border-top: 1px solid var(--border-color); */
 }
 
 /* Tambahkan overlay gelap agar background tidak menelan teks */
 .scrollytelling-section::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(
-        180deg,
-        rgba(9, 9, 11, 1) 0%,
-        rgba(9, 9, 11, 0.6) 50%,
-        rgba(9, 9, 11, 1) 100%
-    );
-    z-index: 0;
-    pointer-events: none;
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(9, 9, 11, 1) 0%,
+    rgba(9, 9, 11, 0.6) 50%,
+    rgba(9, 9, 11, 1) 100%
+  );
+  z-index: 0;
+  pointer-events: none;
 }
 
 .sticky-container {
-    position: sticky;
-    top: 0;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    z-index: 1; /* Pastikan konten teks ada di atas overlay */
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  z-index: 1; /* Pastikan konten teks ada di atas overlay */
 }
 
 /* Efek cahaya berpendar di tengah layar */
@@ -1638,7 +1638,7 @@ footer {
   align-items: center;
   justify-content: center;
   transition: all 0.4s ease;
-  filter: grayscale(100%) opacity(40%);
+  filter: grayscale(100%) opacity(70%);
   cursor: pointer;
 }
 
@@ -2065,7 +2065,6 @@ footer {
   font-weight: 700; /* Membuat teks sedikit lebih tebal agar menonjol */
 }
 
-
 /* ==========================================
    OPERATIONAL SUPERIORITY (MODERN ASYMMETRIC)
    ========================================== */
@@ -2180,9 +2179,18 @@ footer {
   pointer-events: none;
 }
 
-.rc-1 { width: 100px; height: 100px; }
-.rc-2 { width: 220px; height: 220px; }
-.rc-3 { width: 340px; height: 340px; }
+.rc-1 {
+  width: 100px;
+  height: 100px;
+}
+.rc-2 {
+  width: 220px;
+  height: 220px;
+}
+.rc-3 {
+  width: 340px;
+  height: 340px;
+}
 
 /* Sorotan Cahaya Radar (Berputar) */
 .radar-cone {
@@ -2192,7 +2200,11 @@ footer {
   transform: translateY(-50%);
   width: 400px;
   height: 400px;
-  background: conic-gradient(from 180deg at 100% 50%, rgba(74, 222, 128, 0.25) 0deg, transparent 70deg);
+  background: conic-gradient(
+    from 180deg at 100% 50%,
+    rgba(74, 222, 128, 0.25) 0deg,
+    transparent 70deg
+  );
   border-radius: 50%;
   pointer-events: none;
   animation: radarSweep 4s linear infinite;
@@ -2204,7 +2216,7 @@ footer {
   position: relative;
   z-index: 2;
   font-size: 0.65rem;
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: "Space Grotesk", sans-serif;
   color: #4ade80;
   border: 1px solid rgba(74, 222, 128, 0.4);
   padding: 6px 12px;
@@ -2215,8 +2227,12 @@ footer {
 }
 
 @keyframes radarSweep {
-  0% { transform: translateY(-50%) rotate(-45deg); }
-  100% { transform: translateY(-50%) rotate(315deg); }
+  0% {
+    transform: translateY(-50%) rotate(-45deg);
+  }
+  100% {
+    transform: translateY(-50%) rotate(315deg);
+  }
 }
 
 /* Responsif HP */
@@ -2224,7 +2240,7 @@ footer {
   .sup-grid {
     grid-template-columns: 1fr;
   }
-} 
+}
 
 /* ==========================================
    BORDERLESS EDITORIAL SHOWCASE (NON-CARD)
@@ -2252,7 +2268,7 @@ footer {
 }
 
 .ed-badge {
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: "Space Grotesk", sans-serif;
   color: var(--brand-orange);
   font-size: 0.85rem;
   font-weight: 700;
@@ -2303,7 +2319,7 @@ footer {
 }
 
 .ed-feat-item h4 {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 1rem;
   color: #fcfcfc;
   margin-bottom: 0.6rem;
@@ -2325,8 +2341,10 @@ footer {
 .ed-visual::before {
   content: "";
   position: absolute;
-  top: -20px; left: -20px;
-  width: 80px; height: 80px;
+  top: -20px;
+  left: -20px;
+  width: 80px;
+  height: 80px;
   border-top: 2px solid var(--brand-orange);
   border-left: 2px solid var(--brand-orange);
   opacity: 0.4;
@@ -2337,8 +2355,10 @@ footer {
 .ed-visual::after {
   content: "";
   position: absolute;
-  bottom: -20px; right: -20px;
-  width: 80px; height: 80px;
+  bottom: -20px;
+  right: -20px;
+  width: 80px;
+  height: 80px;
   border-bottom: 2px solid var(--brand-orange);
   border-right: 2px solid var(--brand-orange);
   opacity: 0.4;
@@ -2346,8 +2366,16 @@ footer {
   transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
-.ed-visual:hover::before { top: -25px; left: -25px; opacity: 1; }
-.ed-visual:hover::after { bottom: -25px; right: -25px; opacity: 1; }
+.ed-visual:hover::before {
+  top: -25px;
+  left: -25px;
+  opacity: 1;
+}
+.ed-visual:hover::after {
+  bottom: -25px;
+  right: -25px;
+  opacity: 1;
+}
 
 .ed-visual img {
   position: relative;
@@ -2382,7 +2410,8 @@ footer {
     grid-template-columns: 1fr;
     gap: 1.5rem;
   }
-  .ed-visual::before, .ed-visual::after {
+  .ed-visual::before,
+  .ed-visual::after {
     display: none; /* Sembunyikan aksen siku di HP agar tidak sempit */
   }
 }
@@ -2421,7 +2450,7 @@ footer {
 }
 
 .tech-marquee-content span {
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: "Space Grotesk", sans-serif;
   font-size: clamp(3rem, 5vw, 4.5rem);
   font-weight: 800;
   text-transform: uppercase;
@@ -2447,14 +2476,25 @@ footer {
 }
 
 @keyframes scrollTechText {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
 @media (max-width: 768px) {
-  .tech-marquee-separator { padding: 2rem 0; }
-  .tech-marquee-content span { -webkit-text-stroke: 0; } /* Hapus stroke juga di mode HP */
-  .tech-marquee-content svg { width: 30px; height: 30px; }
+  .tech-marquee-separator {
+    padding: 2rem 0;
+  }
+  .tech-marquee-content span {
+    -webkit-text-stroke: 0;
+  } /* Hapus stroke juga di mode HP */
+  .tech-marquee-content svg {
+    width: 30px;
+    height: 30px;
+  }
 }
 
 /* ==========================================
@@ -2482,9 +2522,18 @@ footer {
 }
 
 @keyframes dangerPulse {
-  0% { transform: scale(0.9); opacity: 0.5; }
-  50% { transform: scale(1.1); opacity: 1; }
-  100% { transform: scale(0.9); opacity: 0.5; }
+  0% {
+    transform: scale(0.9);
+    opacity: 0.5;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0.9);
+    opacity: 0.5;
+  }
 }
 
 /* Animasi Sinyal Ping dari Pesawat Kita */
@@ -2493,6 +2542,94 @@ footer {
 }
 
 @keyframes radarPing {
-  0% { transform: scale(0.2); opacity: 1; }
-  100% { transform: scale(2.5); opacity: 0; }
+  0% {
+    transform: scale(0.2);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(2.5);
+    opacity: 0;
+  }
+}
+
+/* Container untuk memotong konten yang meluber (overflow) */
+.mitra-marquee-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  /* Membuat gradient hitam di ujung kiri dan kanan agar animasi memudar elegan */
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 5%,
+    black 95%,
+    transparent
+  );
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 5%,
+    black 95%,
+    transparent
+  );
+}
+
+/* Track panjang yang menampung semua logo */
+.mitra-marquee-track {
+  display: flex;
+  align-items: center;
+  gap: 4rem; /* Jarak antar logo */
+  width: max-content;
+  /* Animasi bergeser dari 0% ke 50% lebar karena kita duplikat 2 set */
+  animation: scrollMitraLogo 30s linear infinite;
+  padding: 1rem 0;
+}
+
+/* Animasi akan berhenti saat logo di-hover (diarahkan kursor) */
+.mitra-marquee-track:hover {
+  animation-play-state: paused;
+}
+
+@keyframes scrollMitraLogo {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Desain per-logo (Mempertahankan efek abu-abu saat diam, berwarna saat di-hover) */
+.partner-logo {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.4s ease;
+  cursor: pointer;
+}
+
+/* Ukuran agar gambar JPG/PNG Mitra seragam */
+.partner-logo img {
+  width: auto;
+  height: 60px; /* Seragamkan tingginya */
+  max-width: 150px; /* Batas maksimal lebar agar tidak terlalu panjang */
+  object-fit: contain;
+  border-radius: 8px; /* Sedikit lengkungan jika gambarnya non-transparan */
+}
+
+.partner-logo:hover {
+  filter: grayscale(0%) opacity(100%);
+  transform: translateY(-3px) scale(1.05);
+}
+
+/* Responsif HP */
+@media (max-width: 768px) {
+  .mitra-marquee-track {
+    gap: 2.5rem;
+  }
+  .partner-logo img {
+    height: 45px;
+    max-width: 120px;
+  }
 }
