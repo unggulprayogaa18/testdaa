@@ -1273,21 +1273,42 @@ footer {
   } */
 
 /* --- SCROLLYTELLING SECTION (MODERN) --- */
+/* --- SCROLLYTELLING SECTION (MODERN PARALLAX) --- */
 .scrollytelling-section {
-  height: 300vh;
-  position: relative;
-  background-color: var(--bg-dark);
-  z-index: 2;
+    height: 300vh;
+    position: relative;
+    
+    /* GANTI BACKGROUND JADI PARALLAX IMAGE */
+    background: url('/assets/foto/team3.png') center/cover no-repeat fixed; 
+    
+    z-index: 2;
+    /* border-top: 1px solid var(--border-color); */
+}
+
+/* Tambahkan overlay gelap agar background tidak menelan teks */
+.scrollytelling-section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        180deg,
+        rgba(9, 9, 11, 1) 0%,
+        rgba(9, 9, 11, 0.6) 50%,
+        rgba(9, 9, 11, 1) 100%
+    );
+    z-index: 0;
+    pointer-events: none;
 }
 
 .sticky-container {
-  position: sticky;
-  top: 0;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    z-index: 1; /* Pastikan konten teks ada di atas overlay */
 }
 
 /* Efek cahaya berpendar di tengah layar */
