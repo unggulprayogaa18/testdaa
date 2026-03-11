@@ -174,4 +174,41 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
     }
+
+    // ==========================================
+    // 8. PAGE TRANSITION (SCROLL TO BOTTOM)
+    // ==========================================
+    let isRedirecting = false;
+    const transitionOverlay = document.getElementById('page-transition-overlay');
+    const transitionBar = document.querySelector('.transition-bar');
+
+    window.addEventListener('scroll', () => {
+        // Kalkulasi posisi scroll saat ini.
+        // Math.ceil digunakan untuk menghindari nilai pecahan yang mencegah trigger di beberapa browser.
+        // Angka 10 adalah threshold (toleransi 10px dari batas bawah) agar lebih responsif.
+        const scrollPosition = Math.ceil(window.innerHeight + window.scrollY);
+        const documentHeight = document.documentElement.scrollHeight;
+
+        if (scrollPosition >= documentHeight - 10) {
+            if (!isRedirecting && transitionOverlay) {
+                isRedirecting = true; // Kunci agar tidak ter-trigger berulang kali
+                
+                // Mencegah scroll lebih lanjut
+                document.body.style.overflow = 'hidden'; 
+                
+                // 1. Munculkan layar transisi
+                transitionOverlay.classList.add('active');
+
+                // 2. Animasikan loading bar setelah layar terangkat penuh (0.8 detik)
+                setTimeout(() => {
+                    if (transitionBar) transitionBar.style.width = '100%';
+                }, 800);
+
+                // 3. Arahkan ke halaman Cargo setelah animasi selesai
+                setTimeout(() => {
+                    window.location.href = 'https://revnaerocargo.vercel.app/';
+                }, 2200); // Tunggu 2.2 detik (0.8s slide + 1.2s loading + 0.2s jeda)
+            }
+        }
+    });
 });
